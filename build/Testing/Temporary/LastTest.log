@@ -1,0 +1,349 @@
+Start testing: Jun 17 10:07 中国标准时间
+----------------------------------------------------------
+1/6 Testing: test_segy_parser
+1/6 Test: test_segy_parser
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_segy_parser.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_segy_parser" start time: Jun 17 10:07 中国标准时间
+Output:
+----------------------------------------------------------
+=== Testing SEGY Parser ===
+
+1. Testing creation of synthetic SEGY file...
+  PASS: Created test SEGY file
+
+2. Testing SEGY file parsing...
+  Headers parsed successfully:
+    Binary header job ID: 12345
+    Sample interval: 1000 us
+    Samples per trace: 100
+    Data format code: 1
+    Data format enum: 1
+  PASS: Binary header values correct
+  Parsed 5 traces
+  PASS: Correct number of traces
+  Trace 0:
+    Sequence number: 1
+    Source X: 1000
+    Group X: 2000
+    Data size: 100 samples
+    First sample: 0
+  Trace 1:
+    Sequence number: 2
+    Source X: 1100
+    Group X: 2050
+    Data size: 100 samples
+    First sample: 0.00841471
+  Trace 2:
+    Sequence number: 3
+    Source X: 1200
+    Group X: 2100
+    Data size: 100 samples
+    First sample: 0.00909297
+  Trace 3:
+    Sequence number: 4
+    Source X: 1300
+    Group X: 2150
+    Data size: 100 samples
+    First sample: 0.0014112
+  Trace 4:
+    Sequence number: 5
+    Source X: 1400
+    Group X: 2200
+    Data size: 100 samples
+    First sample: -0.00756802
+  PASS: Trace headers and data correct
+  PASS: File closed correctly
+
+3. Testing individual trace parsing...
+  Parsed trace 2:
+    Sequence number: 3
+    Data samples: 100
+  PASS: Individual trace parsing works
+
+=== Test Summary ===
+Passed: 5/5
+All tests passed!
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"test_segy_parser" end time: Jun 17 10:07 中国标准时间
+"test_segy_parser" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: test_wavelet
+2/6 Test: test_wavelet
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_wavelet.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_wavelet" start time: Jun 17 10:07 中国标准时间
+Output:
+----------------------------------------------------------
+=== Testing Wavelet Generation ===
+
+1. Testing Ricker wavelet...
+  Ricker wavelet created:
+    Sample interval: 0.001 s
+    Number of samples: 201
+    Duration: 0.201 s
+    Peak frequency: 30 Hz
+    Type: 0
+  PASS: Ricker wavelet parameters correct
+    Maximum amplitude: 1 at sample 100
+  PASS: Normalization works correctly
+
+2. Testing Gaussian wavelet...
+  Gaussian wavelet created:
+    Sample interval: 0.001 s
+    Number of samples: 2001
+    Duration: 2.001 s
+  PASS: Gaussian wavelet created successfully
+
+3. Testing Ormsby wavelet...
+  Ormsby wavelet created:
+    Sample interval: 0.001 s
+    Number of samples: 2001
+  PASS: Ormsby wavelet created successfully
+
+4. Testing Sine wavelet...
+  Sine wavelet created:
+    Sample interval: 0.001 s
+    Number of samples: 2001
+    Frequency: 25 Hz
+  PASS: Sine wavelet created successfully
+  PASS: at_time interpolation works
+
+=== Test Summary ===
+Passed: 6/6
+All tests passed!
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"test_wavelet" end time: Jun 17 10:07 中国标准时间
+"test_wavelet" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: test_velocity_model
+3/6 Test: test_velocity_model
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_velocity_model.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_velocity_model" start time: Jun 17 10:07 中国标准时间
+Output:
+----------------------------------------------------------
+=== Testing Velocity Model ===
+
+1. Testing basic velocity model creation...
+  Model grid:
+    nx=100, nz=80
+    dx=10m, dz=10m
+    ox=0m, oz=0m
+  PASS: Model dimensions correct
+
+2. Testing uniform velocity model...
+  Uniform velocity: 2500 m/s
+  Max velocity in model: 2500 m/s
+  Min velocity in model: 2500 m/s
+  PASS: Uniform velocity set correctly
+  PASS: Velocity at center correct
+
+3. Testing gradient velocity model...
+  Velocity at top: 1500 m/s
+  Velocity at bottom: 3500 m/s
+  Velocity at middle: 2510.1 m/s
+  PASS: Gradient velocity model created correctly
+
+4. Testing layered velocity model...
+  Velocity in water layer: 1500 m/s
+  Velocity in layer 2: 2000 m/s
+  Velocity in layer 3: 2500 m/s
+  PASS: Layered velocity model created correctly
+
+5. Testing stability analysis...
+  CFL=0.5 stable dt: 1.66667 ms
+  PML size for 30Hz: 20 grid points
+  PASS: Stability analysis results reasonable
+
+6. Testing rectangular anomaly...
+  Velocity outside anomaly: 2500 m/s
+  Velocity inside anomaly: 3000 m/s
+  PASS: Rectangular anomaly added correctly
+
+=== Test Summary ===
+Passed: 7/7
+All tests passed!
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"test_velocity_model" end time: Jun 17 10:07 中国标准时间
+"test_velocity_model" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: test_acoustic_2d_fd
+4/6 Test: test_acoustic_2d_fd
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_acoustic_2d_fd.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_acoustic_2d_fd" start time: Jun 17 10:07 中国标准时间
+Output:
+----------------------------------------------------------
+=== Testing Acoustic 2D FD Solver ===
+
+1. Testing solver creation and initialization...
+  Simulation parameters:
+    dt: 2 ms
+    Time steps: 200
+    Total time: 0.4 s
+    PML width: 10
+  Solver initialized successfully
+    Current pressure max: 120x100
+  PASS: Solver creation and initialization works
+
+2. Testing solver time stepping...
+    Progress: 10% (step 10, time 20 ms)
+    Progress: 20% (step 20, time 40 ms)
+    Progress: 30% (step 30, time 60 ms)
+    Progress: 40% (step 40, time 80 ms)
+    Progress: 50% (step 50, time 100 ms)
+    Progress: 60% (step 60, time 120 ms)
+    Progress: 70% (step 70, time 140 ms)
+    Progress: 80% (step 80, time 160 ms)
+    Progress: 90% (step 90, time 180 ms)
+    Progress: 100% (step 100, time 200 ms)
+  Simulation completed:
+    Final time step: 100
+    Final time: 200 ms
+    Number of snapshots: 6
+    Number of receiver data: 10
+  PASS: Solver time stepping works correctly
+  Last snapshot:
+    Time step: 100
+    Time: 200 ms
+    Pressure grid: 80x60
+    Max pressure amplitude: 2.9613e+147
+  PASS: Snapshot contains valid data
+  Receiver 0 max amplitude: 1.05499e+116
+  Receiver 0 sample count: 100
+  PASS: Receiver recording works
+
+3. Testing layered model simulation...
+  Layered model simulation completed:
+    Time steps: 300
+    Snapshots: 4
+  PASS: Layered model simulation works
+
+=== Test Summary ===
+Passed: 5/5
+All tests passed!
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"test_acoustic_2d_fd" end time: Jun 17 10:07 中国标准时间
+"test_acoustic_2d_fd" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: test_ibm_float
+5/6 Test: test_ibm_float
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_ibm_float.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_ibm_float" start time: Jun 17 10:07 中国标准时间
+Output:
+----------------------------------------------------------
+=== Testing IBM Float Conversion ===
+
+1. Testing ibm_to_ieee and ieee_to_ibm round-trip...
+  PASS: 0 -> ibm(0x0) -> 0 (rel_error: 0)
+  PASS: 1 -> ibm(0x41100000) -> 1 (rel_error: 0)
+  PASS: -1 -> ibm(0xc1100000) -> -1 (rel_error: 0)
+  PASS: 3.14159 -> ibm(0x413243f4) -> 3.14159 (rel_error: 0)
+  PASS: -2.71828 -> ibm(0xc12b7e13) -> -2.71828 (rel_error: 8.77094e-08)
+  PASS: 1000 -> ibm(0x433e8000) -> 1000 (rel_error: 0)
+  PASS: 0.001 -> ibm(0x3e418937) -> 0.001 (rel_error: 1.16415e-07)
+  PASS: 123.456 -> ibm(0x427b74bc) -> 123.456 (rel_error: 6.17985e-08)
+  PASS: -789.012 -> ibm(0xc3315031) -> -789.012 (rel_error: 7.73564e-08)
+  PASS: 1e+10 -> ibm(0x492540be) -> 1e+10 (rel_error: 1.024e-07)
+  PASS: 1e-10 -> ibm(0x386df37f) -> 1e-10 (rel_error: 6.93889e-08)
+
+2. Testing ibm32_to_ieee64 and ieee64_to_ibm32 round-trip...
+  PASS: 0 -> ibm(0x0) -> 0 (rel_error: 0)
+  PASS: 1 -> ibm(0x41100000) -> 1 (rel_error: 0)
+  PASS: -1 -> ibm(0xc1100000) -> -1 (rel_error: 0)
+  PASS: 3.14159 -> ibm(0x413243f6) -> 3.14159 (rel_error: 1.99845e-07)
+  PASS: -2.71828 -> ibm(0xc12b7e15) -> -2.71828 (rel_error: 3.03679e-08)
+  PASS: 1000 -> ibm(0x433e8000) -> 1000 (rel_error: 0)
+  PASS: 0.001 -> ibm(0x3e418937) -> 0.001 (rel_error: 6.89179e-08)
+  PASS: 12345.7 -> ibm(0x443039ad) -> 12345.7 (rel_error: 2.52619e-07)
+  PASS: -9876.54 -> ibm(0xc426948b) -> -9876.54 (rel_error: 2.44266e-08)
+  PASS: 1e+20 -> ibm(0x5156bc76) -> 1e+20 (rel_error: 2.00409e-08)
+  PASS: 1e-20 -> ibm(0x302f3942) -> 1e-20 (rel_error: 1.58672e-08)
+
+3. Testing special values...
+  PASS: Zero conversion works correctly
+  PASS: Large value handled: 1e+30 -> 1e+30
+
+=== Test Summary ===
+Passed: 24/24
+All tests passed!
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"test_ibm_float" end time: Jun 17 10:07 中国标准时间
+"test_ibm_float" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: test_vtk_writer
+6/6 Test: test_vtk_writer
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_vtk_writer.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_vtk_writer" start time: Jun 17 10:07 中国标准时间
+Output:
+----------------------------------------------------------
+=== Testing VTK Writer ===
+
+1. Testing velocity model VTK export...
+  PASS: Velocity model written to ./test_vtk_output/velocity_model.vtk
+    # vtk DataFile Version 3.0
+    Velocity Model
+    ASCII
+    DATASET STRUCTURED_POINTS
+    DIMENSIONS 50 1 40
+    ORIGIN 0.000000e+00 0.000000e+00 0.000000e+00
+    SPACING 1.000000e+01 1.000000e+01 1.000000e+01
+    POINT_DATA 2000
+    SCALARS Velocity float 1
+    LOOKUP_TABLE default
+
+2. Testing snapshot VTK export...
+  PASS: Legacy ASCII snapshot written to ./test_vtk_output/snapshot_ascii.vtk
+  PASS: Legacy Binary snapshot written to ./test_vtk_output/snapshot_binary.vtk
+  PASS: XML ImageData snapshot written to ./test_vtk_output/snapshot_xml.vti
+
+3. Testing 3D snapshot export...
+  PASS: 3D snapshot written to ./test_vtk_output/snapshot_3d.vtk
+    DATASET STRUCTURED_POINTS
+    DIMENSIONS 50 3 40
+    SCALARS Pressure float 1
+
+4. Testing snapshot series export...
+  PASS: Snapshot series written to ./test_vtk_output/series
+    wave_000000.vtk
+    wave_000001.vtk
+    wave_000002.vtk
+    wave_000003.vtk
+    wave_000004.vtk
+  PASS: Correct number of files in series
+
+=== Test Summary ===
+Passed: 6/6
+All tests passed!
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"test_vtk_writer" end time: Jun 17 10:07 中国标准时间
+"test_vtk_writer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 17 10:07 中国标准时间

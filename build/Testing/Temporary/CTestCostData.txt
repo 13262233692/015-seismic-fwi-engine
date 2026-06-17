@@ -1,0 +1,7 @@
+test_segy_parser 1 0.0460784
+test_wavelet 2 0.0254939
+test_velocity_model 2 0.0232025
+test_acoustic_2d_fd 2 0.0669418
+test_ibm_float 1 0.040836
+test_vtk_writer 2 0.0612053
+---

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\SOLO-13\015-seismic-fwi-engine\build\CMakeFiles\6a17ed6e4de9e3a1d40b6058769b9447\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8E574C03-3CC3-3669-B555-4A4C6FE35B63}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

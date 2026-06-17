@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\SOLO-13\015-seismic-fwi-engine\build\CMakeFiles\c0f0ff05584522f88093aaf719e08b83\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8E574C03-3CC3-3669-B555-4A4C6FE35B63}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

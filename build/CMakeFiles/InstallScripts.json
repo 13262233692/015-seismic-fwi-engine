@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/SOLO-13/015-seismic-fwi-engine/build/cmake_install.cmake",
+		"D:/SOLO-13/015-seismic-fwi-engine/build/src/cmake_install.cmake",
+		"D:/SOLO-13/015-seismic-fwi-engine/build/tests/cmake_install.cmake",
+		"D:/SOLO-13/015-seismic-fwi-engine/build/examples/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
