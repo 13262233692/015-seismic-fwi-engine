@@ -214,6 +214,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{583451FC-D67B-3814-BB09-72B7F91AC0F8}</Project>
       <Name>test_acoustic_2d_fd</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\SOLO-13\015-seismic-fwi-engine\build\tests\test_fwi_gradient.vcxproj">
+      <Project>{7882809F-B3A1-3C53-B497-6E8F365B753B}</Project>
+      <Name>test_fwi_gradient</Name>
+    </ProjectReference>
     <ProjectReference Include="D:\SOLO-13\015-seismic-fwi-engine\build\tests\test_ibm_float.vcxproj">
       <Project>{A4493536-6FCB-3C5E-800F-7848171C2F21}</Project>
       <Name>test_ibm_float</Name>

@@ -1,2 +1,6 @@
 # CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/FindOpenMP.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake
 D:/SOLO-13/015-seismic-fwi-engine/src/CMakeLists.txt

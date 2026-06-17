@@ -41,3 +41,10 @@ add_executable(test_vtk_writer
 target_link_libraries(test_vtk_writer PRIVATE fwi_io fwi_modeling fwi_common)
 target_compile_definitions(test_vtk_writer PRIVATE _USE_MATH_DEFINES NOMINMAX)
 add_test(NAME test_vtk_writer COMMAND test_vtk_writer)
+
+add_executable(test_fwi_gradient
+    test_fwi_gradient.cpp
+)
+target_link_libraries(test_fwi_gradient PRIVATE fwi_core fwi_modeling fwi_geometry fwi_io fwi_segy fwi_common)
+target_compile_definitions(test_fwi_gradient PRIVATE _USE_MATH_DEFINES NOMINMAX)
+add_test(NAME test_fwi_gradient COMMAND test_fwi_gradient)

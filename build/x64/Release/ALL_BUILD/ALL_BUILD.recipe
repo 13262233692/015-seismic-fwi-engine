@@ -17,6 +17,9 @@
       <FullPath>D:\SOLO-13\015-seismic-fwi-engine\build\tests\Release\test_acoustic_2d_fd.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>D:\SOLO-13\015-seismic-fwi-engine\build\tests\Release\test_fwi_gradient.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>D:\SOLO-13\015-seismic-fwi-engine\build\tests\Release\test_ibm_float.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>

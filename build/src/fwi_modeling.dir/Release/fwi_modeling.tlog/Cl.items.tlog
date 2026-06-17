@@ -2,3 +2,4 @@ D:\SOLO-13\015-seismic-fwi-engine\src\modeling\velocity_model.cpp;D:\SOLO-13\015
 D:\SOLO-13\015-seismic-fwi-engine\src\modeling\source.cpp;D:\SOLO-13\015-seismic-fwi-engine\build\src\fwi_modeling.dir\Release\source.obj
 D:\SOLO-13\015-seismic-fwi-engine\src\modeling\wavelet.cpp;D:\SOLO-13\015-seismic-fwi-engine\build\src\fwi_modeling.dir\Release\wavelet.obj
 D:\SOLO-13\015-seismic-fwi-engine\src\modeling\acoustic_2d_fd.cpp;D:\SOLO-13\015-seismic-fwi-engine\build\src\fwi_modeling.dir\Release\acoustic_2d_fd.obj
+D:\SOLO-13\015-seismic-fwi-engine\src\modeling\fwi_gradient.cpp;D:\SOLO-13\015-seismic-fwi-engine\build\src\fwi_modeling.dir\Release\fwi_gradient.obj

@@ -1,10 +1,10 @@
-Start testing: Jun 17 10:07 中国标准时间
+Start testing: Jun 17 10:32 中国标准时间
 ----------------------------------------------------------
-1/6 Testing: test_segy_parser
-1/6 Test: test_segy_parser
+1/7 Testing: test_segy_parser
+1/7 Test: test_segy_parser
 Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_segy_parser.exe"
 Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
-"test_segy_parser" start time: Jun 17 10:07 中国标准时间
+"test_segy_parser" start time: Jun 17 10:32 中国标准时间
 Output:
 ----------------------------------------------------------
 === Testing SEGY Parser ===
@@ -65,18 +65,18 @@ Output:
 Passed: 5/5
 All tests passed!
 <end of output>
-Test time =   0.05 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"test_segy_parser" end time: Jun 17 10:07 中国标准时间
+"test_segy_parser" end time: Jun 17 10:32 中国标准时间
 "test_segy_parser" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/6 Testing: test_wavelet
-2/6 Test: test_wavelet
+2/7 Testing: test_wavelet
+2/7 Test: test_wavelet
 Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_wavelet.exe"
 Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
-"test_wavelet" start time: Jun 17 10:07 中国标准时间
+"test_wavelet" start time: Jun 17 10:32 中国标准时间
 Output:
 ----------------------------------------------------------
 === Testing Wavelet Generation ===
@@ -117,18 +117,18 @@ Output:
 Passed: 6/6
 All tests passed!
 <end of output>
-Test time =   0.05 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"test_wavelet" end time: Jun 17 10:07 中国标准时间
+"test_wavelet" end time: Jun 17 10:32 中国标准时间
 "test_wavelet" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/6 Testing: test_velocity_model
-3/6 Test: test_velocity_model
+3/7 Testing: test_velocity_model
+3/7 Test: test_velocity_model
 Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_velocity_model.exe"
 Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
-"test_velocity_model" start time: Jun 17 10:07 中国标准时间
+"test_velocity_model" start time: Jun 17 10:32 中国标准时间
 Output:
 ----------------------------------------------------------
 === Testing Velocity Model ===
@@ -176,15 +176,15 @@ All tests passed!
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"test_velocity_model" end time: Jun 17 10:07 中国标准时间
+"test_velocity_model" end time: Jun 17 10:32 中国标准时间
 "test_velocity_model" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/6 Testing: test_acoustic_2d_fd
-4/6 Test: test_acoustic_2d_fd
+4/7 Testing: test_acoustic_2d_fd
+4/7 Test: test_acoustic_2d_fd
 Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_acoustic_2d_fd.exe"
 Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
-"test_acoustic_2d_fd" start time: Jun 17 10:07 中国标准时间
+"test_acoustic_2d_fd" start time: Jun 17 10:32 中国标准时间
 Output:
 ----------------------------------------------------------
 === Testing Acoustic 2D FD Solver ===
@@ -239,15 +239,15 @@ All tests passed!
 Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"test_acoustic_2d_fd" end time: Jun 17 10:07 中国标准时间
+"test_acoustic_2d_fd" end time: Jun 17 10:32 中国标准时间
 "test_acoustic_2d_fd" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/6 Testing: test_ibm_float
-5/6 Test: test_ibm_float
+5/7 Testing: test_ibm_float
+5/7 Test: test_ibm_float
 Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_ibm_float.exe"
 Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
-"test_ibm_float" start time: Jun 17 10:07 中国标准时间
+"test_ibm_float" start time: Jun 17 10:32 中国标准时间
 Output:
 ----------------------------------------------------------
 === Testing IBM Float Conversion ===
@@ -286,18 +286,18 @@ Output:
 Passed: 24/24
 All tests passed!
 <end of output>
-Test time =   0.04 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test_ibm_float" end time: Jun 17 10:07 中国标准时间
+"test_ibm_float" end time: Jun 17 10:32 中国标准时间
 "test_ibm_float" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/6 Testing: test_vtk_writer
-6/6 Test: test_vtk_writer
+6/7 Testing: test_vtk_writer
+6/7 Test: test_vtk_writer
 Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_vtk_writer.exe"
 Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
-"test_vtk_writer" start time: Jun 17 10:07 中国标准时间
+"test_vtk_writer" start time: Jun 17 10:32 中国标准时间
 Output:
 ----------------------------------------------------------
 === Testing VTK Writer ===
@@ -342,8 +342,120 @@ All tests passed!
 Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"test_vtk_writer" end time: Jun 17 10:07 中国标准时间
+"test_vtk_writer" end time: Jun 17 10:32 中国标准时间
 "test_vtk_writer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 17 10:07 中国标准时间
+7/7 Testing: test_fwi_gradient
+7/7 Test: test_fwi_gradient
+Command: "D:/SOLO-13/015-seismic-fwi-engine/build/tests/Release/test_fwi_gradient.exe"
+Directory: D:/SOLO-13/015-seismic-fwi-engine/build/tests
+"test_fwi_gradient" start time: Jun 17 10:32 中国标准时间
+Output:
+----------------------------------------------------------
+================================================
+  FWI Gradient Thread-Safety Test
+================================================
+
+=== Test Configuration ===
+  Grid: 50 x 40 (dx=20m, dz=20m)
+  Time steps: 200, dt=0.001s
+
+=== Creating Velocity Model ===
+  Velocity range: 1500 - 3450 m/s
+
+=== Creating Survey Geometry ===
+  Shots: 3
+  Receivers: 20
+
+=== Setting Simulation Parameters ===
+  dt=0.001s, nt=200, PML=10
+
+=== Setting Wavelet ===
+  Ricker wavelet, 30 Hz, 201 samples
+
+=== Generating Observed Data (Synthetic) ===
+  Creating true model (with anomaly) for observed data...
+Starting forward modeling for shot 0 at (200, 20)...
+Grid: 50x40, dx=20m, dz=20m
+Time steps: 200, dt=0.001s
+Total recording time: 0.2s
+PML width: 10 grid points
+Snapshot interval: every 10 steps
+Progress: 0% (1/200 steps, t=0.001s)Progress: 10% (20/200 steps, t=0.020s)Progress: 20% (40/200 steps, t=0.040s)Progress: 30% (60/200 steps, t=0.060s)Progress: 40% (80/200 steps, t=0.080s)Progress: 50% (100/200 steps, t=0.100s)Progress: 60% (120/200 steps, t=0.120s)Progress: 70% (140/200 steps, t=0.140s)Progress: 80% (160/200 steps, t=0.160s)Progress: 90% (180/200 steps, t=0.180s)Progress: 100% (200/200 steps, t=0.200s)
+Forward modeling completed. Saved 21 snapshots.
+  Generated 20 receiver traces, 200 samples each
+  True model velocity range: 1500.000 - 3550.000 m/s
+  Initial model velocity range: 1500.000 - 3450.000 m/s
+
+=== Running Gradient Computations ===
+
+--- Mode: SERIAL ---
+  Run 1/5: ||grad||=4.914567e-05, hash=0x42e07ea133d1187c, residual=6.188005e-02
+  Run 2/5: ||grad||=4.914567e-05, hash=0x42e07ea133d1187c, residual=6.188005e-02
+  Run 3/5: ||grad||=4.914567e-05, hash=0x42e07ea133d1187c, residual=6.188005e-02
+  Run 4/5: ||grad||=4.914567e-05, hash=0x42e07ea133d1187c, residual=6.188005e-02
+  Run 5/5: ||grad||=4.914567e-05, hash=0x42e07ea133d1187c, residual=6.188005e-02
+
+--- Mode: OPENMP_UNSAFE ---
+  Run 1/5: ||grad||=4.890271e-05, hash=0x71ee3aef640b3c52, residual=6.188005e-02
+  Run 2/5: ||grad||=4.914567e-05, hash=0x8209cbd8b036d6fe, residual=6.188005e-02
+  Run 3/5: ||grad||=4.893274e-05, hash=0xc52d9a1bd9305865, residual=6.188005e-02
+  Run 4/5: ||grad||=4.778478e-05, hash=0x62bb5d2b7537c37d, residual=6.188005e-02
+  Run 5/5: ||grad||=4.828372e-05, hash=0x85aa968c0cb95613, residual=6.188005e-02
+
+--- Mode: OPENMP_ATOMIC ---
+  Run 1/5: ||grad||=4.914567e-05, hash=0x312020b93281bf8c, residual=6.188005e-02
+  Run 2/5: ||grad||=4.914567e-05, hash=0x31856f0b1557db94, residual=6.188005e-02
+  Run 3/5: ||grad||=4.914567e-05, hash=0xd0000c3744a6db7e, residual=6.188005e-02
+  Run 4/5: ||grad||=4.914567e-05, hash=0xb56e7d17d16cd655, residual=6.188005e-02
+  Run 5/5: ||grad||=4.914567e-05, hash=0x6c845ac352516830, residual=6.188005e-02
+
+--- Mode: OPENMP_REDUCTION ---
+  Run 1/5: ||grad||=4.914567e-05, hash=0x5fc4939e4a482429, residual=6.188005e-02
+  Run 2/5: ||grad||=4.914567e-05, hash=0x5fc4939e4a482429, residual=6.188005e-02
+  Run 3/5: ||grad||=4.914567e-05, hash=0x5fc4939e4a482429, residual=6.188005e-02
+  Run 4/5: ||grad||=4.914567e-05, hash=0x5fc4939e4a482429, residual=6.188005e-02
+  Run 5/5: ||grad||=4.914567e-05, hash=0x5fc4939e4a482429, residual=6.188005e-02
+
+=== Reproducibility Analysis ===
+
+--- SERIAL ---
+  ALL 5 RUNS ARE BIT-IDENTICAL [OK]
+
+--- OPENMP_UNSAFE ---
+  (expected) Runs are NOT bit-identical
+  Max abs diff: 1.320593e-06
+  Max rel diff: 9.999994e-01
+  (expected) Severe data race detected [OK]
+  vs SERIAL: max_abs_diff=3.623210e-07, max_rel_diff=9.999994e-01 (data race corruption) [OK]
+
+--- OPENMP_ATOMIC ---
+  (expected) Runs are NOT bit-identical
+  Max abs diff: 6.776264e-21
+  Max rel diff: 1.926118e-13
+  (expected) Only floating-point rounding differences [OK]
+  vs SERIAL: max_abs_diff=2.032879e-20, max_rel_diff=1.869337e-14 [OK]
+
+--- OPENMP_REDUCTION ---
+  ALL 5 RUNS ARE BIT-IDENTICAL [OK]
+  vs SERIAL: max_abs_diff=6.776264e-21, max_rel_diff=4.561181e-14 [OK]
+
+=== Summary ===
+  Passed: 7/7
+
+=== Exporting Results ===
+  Saved gradient to gradient_serial.vtk
+
+================================================
+  ALL TESTS PASSED [OK]
+================================================
+<end of output>
+Test time =   1.07 sec
+----------------------------------------------------------
+Test Passed.
+"test_fwi_gradient" end time: Jun 17 10:32 中国标准时间
+"test_fwi_gradient" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Jun 17 10:32 中国标准时间

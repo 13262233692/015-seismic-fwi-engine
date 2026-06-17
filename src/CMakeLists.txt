@@ -21,8 +21,15 @@ add_library(fwi_modeling STATIC
     modeling/source.cpp
     modeling/wavelet.cpp
     modeling/acoustic_2d_fd.cpp
+    modeling/fwi_gradient.cpp
 )
 target_link_libraries(fwi_modeling PRIVATE fwi_common fwi_geometry)
+
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(fwi_modeling PUBLIC OpenMP::OpenMP_CXX)
+    target_compile_definitions(fwi_modeling PUBLIC FWI_WITH_OPENMP)
+endif()
 
 add_library(fwi_io STATIC
     io/vtk_writer.cpp

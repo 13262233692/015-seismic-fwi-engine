@@ -257,4 +257,108 @@ Acoustic2DFD& FwiEngine::solver() {
     return *solver_;
 }
 
+void FwiEngine::set_gradient_mode(GradientComputationMode mode) {
+    gradient_computer_.set_computation_mode(mode);
+}
+
+GradientComputationMode FwiEngine::gradient_mode() const {
+    return gradient_computer_.computation_mode();
+}
+
+void FwiEngine::set_gradient_threads(int32 num_threads) {
+    gradient_computer_.set_num_threads(num_threads);
+}
+
+int32 FwiEngine::gradient_threads() const {
+    return gradient_computer_.num_threads();
+}
+
+FwiGradientResult FwiEngine::compute_gradient(
+    int32 shot_index,
+    const std::vector<std::vector<float64>>& observed_data
+) {
+    gradient_computer_.set_velocity_model(velocity_model_);
+    gradient_computer_.set_params(sim_params_);
+    gradient_computer_.set_wavelet(wavelet_);
+    gradient_computer_.set_geometry(geometry_);
+
+    return gradient_computer_.compute_gradient(shot_index, observed_data);
+}
+
+FwiGradientResult FwiEngine::compute_gradient_multishot(
+    const std::vector<int32>& shot_indices,
+    const std::vector<std::vector<std::vector<float64>>>& observed_data_all_shots
+) {
+    gradient_computer_.set_velocity_model(velocity_model_);
+    gradient_computer_.set_params(sim_params_);
+    gradient_computer_.set_wavelet(wavelet_);
+    gradient_computer_.set_geometry(geometry_);
+
+    return gradient_computer_.compute_gradient_multishot(shot_indices, observed_data_all_shots);
+}
+
+bool FwiEngine::update_velocity_model(const Array2D<float64>& gradient, float64 step_length) {
+    int32 nx = velocity_model_.grid().nx;
+    int32 nz = velocity_model_.grid().nz;
+
+    if (gradient.nx() != nx || gradient.nz() != nz) {
+        std::cerr << "Error: Gradient dimensions mismatch." << std::endl;
+        return false;
+    }
+
+    double max_grad = 0.0;
+    for (int32 iz = 0; iz < nz; iz++) {
+        for (int32 ix = 0; ix < nx; ix++) {
+            max_grad = (std::max)(max_grad, std::abs(gradient(ix, iz)));
+        }
+    }
+
+    if (max_grad < 1e-15) {
+        std::cerr << "Warning: Gradient is zero, no update applied." << std::endl;
+        return true;
+    }
+
+    double scale = step_length / max_grad;
+
+    for (int32 iz = 0; iz < nz; iz++) {
+        for (int32 ix = 0; ix < nx; ix++) {
+            double old_vel = velocity_model_.get_velocity(ix, iz);
+            double new_vel = old_vel - scale * gradient(ix, iz);
+            new_vel = (std::clamp)(new_vel, 1000.0, 6000.0);
+            velocity_model_.set_velocity(ix, iz, new_vel);
+        }
+    }
+
+    return true;
+}
+
+bool FwiEngine::export_gradient(const std::string& filename) {
+    const Array2D<float64>& grad = gradient_computer_.last_gradient();
+    if (grad.nx() == 0 || grad.nz() == 0) {
+        std::cerr << "Error: No gradient available to export." << std::endl;
+        return false;
+    }
+
+    vtk_writer_.set_format(vtk_format_);
+
+    Grid2D grad_grid(grad.nx(), grad.nz(),
+                     velocity_model_.grid().dx,
+                     velocity_model_.grid().dz,
+                     velocity_model_.grid().ox,
+                     velocity_model_.grid().oz);
+
+    Snapshot2D grad_snap;
+    grad_snap.time_step = 0;
+    grad_snap.time = 0.0;
+    grad_snap.pressure = grad;
+    grad_snap.velocity_x = Array2D<float64>(grad.nx(), grad.nz(), 0.0);
+    grad_snap.velocity_z = Array2D<float64>(grad.nx(), grad.nz(), 0.0);
+
+    return vtk_writer_.write_snapshot(filename, grad_snap, grad_grid);
+}
+
+const FwiGradient& FwiEngine::gradient_computer() const {
+    return gradient_computer_;
+}
+
 }

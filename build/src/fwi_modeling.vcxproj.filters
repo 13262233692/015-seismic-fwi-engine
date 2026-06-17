@@ -13,6 +13,9 @@
     <ClCompile Include="D:\SOLO-13\015-seismic-fwi-engine\src\modeling\acoustic_2d_fd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\SOLO-13\015-seismic-fwi-engine\src\modeling\fwi_gradient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\SOLO-13\015-seismic-fwi-engine\src\CMakeLists.txt" />

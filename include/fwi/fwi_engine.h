@@ -5,6 +5,7 @@
 #include "fwi/geometry/acquisition.h"
 #include "fwi/modeling/velocity_model.h"
 #include "fwi/modeling/acoustic_2d_fd.h"
+#include "fwi/modeling/fwi_gradient.h"
 #include "fwi/io/vtk_writer.h"
 #include <string>
 #include <memory>
@@ -63,6 +64,26 @@ public:
     const Acoustic2DFD& solver() const;
     Acoustic2DFD& solver();
 
+    void set_gradient_mode(GradientComputationMode mode);
+    GradientComputationMode gradient_mode() const;
+    void set_gradient_threads(int32 num_threads);
+    int32 gradient_threads() const;
+
+    FwiGradientResult compute_gradient(
+        int32 shot_index,
+        const std::vector<std::vector<float64>>& observed_data
+    );
+
+    FwiGradientResult compute_gradient_multishot(
+        const std::vector<int32>& shot_indices,
+        const std::vector<std::vector<std::vector<float64>>>& observed_data_all_shots
+    );
+
+    bool update_velocity_model(const Array2D<float64>& gradient, float64 step_length);
+    bool export_gradient(const std::string& filename);
+
+    const FwiGradient& gradient_computer() const;
+
 private:
     ComputeDevice compute_device_;
     VelocityModel2D velocity_model_;
@@ -72,6 +93,7 @@ private:
     std::unique_ptr<Acoustic2DFD> solver_;
     VtkWriter vtk_writer_;
     VtkFormat vtk_format_;
+    FwiGradient gradient_computer_;
 };
 
 }
